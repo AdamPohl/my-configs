@@ -101,9 +101,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias begin="yarn && yarn start"
-alias nukemodules='rm -rf node_modules && yarn cache clean'
-
 alias virtual="source .env/bin/activate"
 
 
