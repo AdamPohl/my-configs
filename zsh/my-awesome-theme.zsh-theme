@@ -101,14 +101,15 @@ fi
 
 # Finally, the prompt.
 PROMPT='${PR_SET_CHARSET}${PR_STITLE}${(e)PR_TITLEBAR}\
-${PR_CYAN}${PR_HBAR}${PR_GREEN}(\
-${PR_RED}%${PR_PWDLEN}<...<%~%<<\
-${PR_GREEN})$(ruby_prompt_info)${PR_CYAN}${PR_HBAR}${PR_GREEN}(\
-${PR_RED}%D{%H:%M:%S | %a %d %b}${PR_GREEN})${PR_CYAN}\
+${PR_CYAN}${PR_HBAR}${PR_GREEN}(${PR_MAGENTA}%${PR_PWDLEN}<...<%~%<<${PR_GREEN})${PR_CYAN}${PR_HBAR}\
+${PR_GREEN}(${PR_YELLOW}$(rvm-prompt)${PR_GREEN})${PR_CYAN}${PR_HBAR}\
+${PR_GREEN}(${PR_YELLOW}node-$(node -v)${PR_GREEN})${PR_CYAN}${PR_HBAR}\
+${PR_GREEN}(${PR_YELLOW}$(python --version)${PR_GREEN})${PR_CYAN}${PR_HBAR}\
+${PR_GREEN}(${PR_MAGENTA}%D{%H:%M:%S | %a %d %b}${PR_GREEN})${PR_CYAN}\
 
 ${PR_CYAN}${PR_LLCORNER}${PR_CYAN}${PR_HBAR}${PR_GREEN}(\
-${PR_LIGHT_BLUE}%{$reset_color%}$(git_prompt_info)$(git_prompt_status)${PR_GREEN})${PR_CYAN}${PR_HBAR}\
-${PR_HBAR}>${PR_NO_COLOUR} '
+${PR_LIGHT_BLUE}$(git_prompt_info)$(git_prompt_status)${PR_GREEN})${PR_CYAN}${PR_HBAR}\
+${PR_HBAR}>${PR_NO_COLOUR}'
 
 # display exitcode on the right when > 0
 return_code="%(?..%{$fg[red]%}%? ↵ %{$reset_color%})"
