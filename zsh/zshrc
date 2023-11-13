@@ -41,7 +41,6 @@ alias devmail="docker run -p 1080:1080 -p 1025:1025 maildev/maildev"
 # export AWS_SECRET_ACCESS_KEY=`jq -r '.Credentials.SecretAccessKey' /tmp/coding_creds.txt`
 
 # Plugins
-# plugin=(git pyenv)
 plugin=(git)
 
 # Setup for DupV5
